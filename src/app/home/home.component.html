@@ -1,0 +1,133 @@
+<!-- 
+<p>
+  wecome to home !
+</p> -->
+<!-- <button [routerLink]="['/team']">team</button> -->
+<!-- <button (click)="team()">Team</button> -->
+
+<!-- 
+<div *ngFor="let x of employee">
+  <div style="padding: 10px; color: blue">
+    FirstName:{{x.first_name}}
+  </div>
+  <div style="padding: 10px; color: rebeccapurple">
+    LastName:{{x.last_name}}
+  </div>
+  <div style="padding: 10px; color:red">
+    email:{{x.email}}
+  </div>
+  <div style="padding: 10px; color: rgb(165, 165, 247)">
+    gender:{{x.gender}}
+  </div>
+</div> -->
+
+
+<!-- <button class="btn btn-primary" (click)="showMe()">
+  {{btn_text}}
+</button>
+
+
+<div *ngIf="show">
+  <div *ngFor="let a of food;let i=index;">
+
+    <div>
+      Sno:{{i+1}}
+    </div>
+    <div style="padding:15px;color:purple">
+      id:{{a.id}}
+      <br> Type:{{a.type}}
+    </div>
+    <div style="padding: 15px;color: magenta">
+      Pappu:{{a.ppu}}
+      <br> Name:{{a.name}}
+    </div>
+  
+  
+    <div *ngFor="let b of a.batters.batter;let z=index;">
+      <div>
+        Sno:{{z+1}}
+      </div>
+      <div style="padding:15px; color:orangered">
+        Batterid:{{b.id}}
+        <br> Battertype:{{b.type}}
+      </div>
+    </div>
+  
+    <div *ngFor="let c of a.topping;let j=index">
+      <div>
+        Sno:{{j+1}}
+      </div>
+  
+      <div style="padding:15px; color:navy">
+        Topping-id:{{c.id}}
+        <br> Toping-type:{{c.type}}
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="col-sm-12">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Sno</th>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Batter</th>
+      <th>Topping</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let a of food;let i=index">
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{a.type}}</td>
+      <td>{{a.name}}</td>
+      <td>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Sno</th>
+                  <th>id</th>
+                  <th>type</th>
+                </tr>
+           </thead>
+           <tbody *ngFor="let b of a.batters.batter;let j=index">
+
+             <tr>
+               <td>{{j+1}}</td>
+               <td>{{b.id}}</td>
+               <td>{{b.type}}</td>
+             </tr>
+           </tbody>
+      </table>
+
+      </td>
+      <td>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Sno</th>
+                      <th>id</th>
+                      <th>type</th>
+                    </tr>
+               </thead>
+               <tbody *ngFor="let c of a.topping;let k=index">
+                 <tr>
+                   <td>{{k+1}}</td>
+                   <td>{{c.id}}</td>
+                   <td>{{c.type}}</td>
+                 </tr>
+               </tbody>
+          </table>
+    
+          </td>
+      
+    </tr>
+
+    
+    
+  </tbody>
+</table>
+</div>
